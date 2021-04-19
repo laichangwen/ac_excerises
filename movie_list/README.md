@@ -1,13 +1,11 @@
 # Movie List
----
 A simple web application for movie fanatic
 
 ## Features
----
-*List movies from movie api
-*Search movies by title
-*Add movies to your favorite list
-*Manage your favorite list
+* List movies from movie api
+* Search movies by title
+* Add movies to your favorite list
+* Manage your favorite list
 
 ### Searching
 Type the title of the movies in search bar
