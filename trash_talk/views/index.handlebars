@@ -1,0 +1,57 @@
+<div class="container py-5">
+  <h1 class="text-center mb-4">你想對誰說幹話?</h1>
+  <form method="POST" action="/">
+    <div class="row d-inline-flex justify-content-around">
+
+      <div class="form-group form-row">
+        <div class="card mr-5" style="width: 20rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="">
+          <div class="card-body">
+            <div class="form-group form-row mb-2 align-items-center ">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="engineer" name="engineer" {{#if
+                  options.engineer}} checked{{/if}}>
+                <label class="custom-control-label" for="engineer">工程師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mx-3" style="width: 20rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="">
+          <div class="card-body">
+            <div class="form-group form-row mb-2 align-items-center">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="designer" name="designer" {{#if
+                  options.designer}} checked{{/if}}>
+                <label class="custom-control-label" for="designer">設計師</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card ml-5" style="width: 20rem;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="">
+          <div class="card-body">
+            <div class="form-group form-row mb-2 align-items-center">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="entrepreneur" name="entrepreneur" {{#if
+                  options.entrepreneur}} checked{{/if}}>
+                <label class="custom-control-label" for="entrepreneur">企業家</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group form-row mt-4">
+      <div>
+        <button class="btn btn-success mt-4 mx-3" type="submit">產生幹話</button>
+      </div>
+      <div class="col-md-10">
+        <textarea type="text" name="trashTalk" class="form-control" id="trash-talk" rows="8" cols="150">{{#each trashtalk}}
+          {{this}}
+          {{/each}}</textarea>
+      </div>
+    </div>
+  </form>
+</div>
