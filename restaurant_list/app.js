@@ -46,6 +46,26 @@ app.get("/search", (req, res) => {
   }
 })
 
+app.get("/restaurants/new", (req, res) => {
+  res.render("new")
+})
+
+app.post("/restaurants", (req, res) => {
+  const newRestaurant = req.body
+  const name = newRestaurant.name
+  const category = newRestaurant.category
+  const location = newRestaurant.location
+  const phone = newRestaurant.phone
+  const google_map = newRestaurant.google_map
+  const description = newRestaurant.description
+  const rating = newRestaurant.rating
+  const image = newRestaurant.image
+
+  return restaurants.create({ name, category, image, location, phone, google_map, rating, description })
+    .then(() => res.redirect("/"))
+    .catch(error => console.log(error))
+})
+
 
 app.get("/restaurants/:restaurant_id", (req, res) => {
   const id = req.params.restaurant_id

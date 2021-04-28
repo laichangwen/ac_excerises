@@ -1,0 +1,67 @@
+<div class="container-sm mt-3">
+  <div class="row">
+    <div class="col-sm-6">
+      <form id="form" action="/restaurants" method="POST" novalidate>
+        <div class="form-group">
+          <label for="name">餐廳名稱</label>
+          <input type="text" class="form-control" name="name" id="name" placeholder="請輸入餐廳名稱 ...">
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="category">餐廳類別</label>
+          <input list="categories" class="form-control" name="category" id="category" placeholder="請輸入餐廳類別 ...">
+          <datalist id="categories">
+            <option>美式</option>
+            <option>義式</option>
+            <option>日式</option>
+            <option>中式</option>
+            <option>韓式</option>
+            <option>餐酒館</option>
+          </datalist>
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="location">餐廳地址</label>
+          <input type="text" class="form-control" name="location" id="location" placeholder="請輸入餐廳地址 ...">
+        </div>
+
+        <div class="form-group">
+          <label for="google_map">餐廳 Google map 連結</label>
+          <input type="text" class="form-control" name="google_map" id="google_map"
+            placeholder="請輸入餐廳Google map URL ...">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">餐廳電話</label>
+          <input type="text" class="form-control" name="phone" id="phone" placeholder="請輸入餐廳電話 ...">
+        </div>
+
+        <div class="form-group">
+          <label for="image">餐廳圖片</label>
+          <input type="text" class="form-control" name="image" id="image" placeholder="請上傳餐廳圖片 ...">
+        </div>
+
+        <div class="form-group">
+          <label for="description">餐廳簡介</label>
+          <textarea placeholder="請輸入餐廳簡介 ..." class="form-control" name="description" rows="8" cols="150"
+            id="description"></textarea>
+        </div>
+
+
+        <div class="form-group">
+          <label for="rating">評價</label>
+          <div class="form-row">
+            <div class="col">
+              <input type="number" name="rating" id="rating" class="form-control" step="0.1" min="0.0" max="5.0">
+            </div>
+          </div>
+        </div>
+        <button id="submit-btn" type="submit" class="btn btn-primary">送出</button>
+      </form>
+    </div>
+  </div>
+</div>
